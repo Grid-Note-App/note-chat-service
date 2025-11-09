@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: notes-grid-app-chat-bot
+  ai:
+    model:
+      chat: ollama
+    ollama:
+      chat:
+        options:
+          model: gpt-oss:20b

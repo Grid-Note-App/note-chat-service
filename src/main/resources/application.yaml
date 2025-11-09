@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: notes-grid-app-chat-bot
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+  ai:
+    openai:
+      chat:
+        base-url: https://generativelanguage.googleapis.com
+        completions-path: /v1beta/openai/chat/completions
+        options:
+          model: gemini-2.0-flash
+      api-key: ${GEMINI_API_KEY}
+    mcp:
+      client:
+        enabled: true
+        name: note-mcp-client
+        version: 1.0.0
+        request-timeout: 30s
+        type: async
+        streamable-http:
+          connections:
+            server1:
+              url: http://note-mcp-server:8080
+              endpoint: /mcp
