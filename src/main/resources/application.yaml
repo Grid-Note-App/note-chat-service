@@ -4,6 +4,7 @@ spring:
   data:
     mongodb:
       uri: ${MONGODB_URI}
+      database: notesapp
   ai:
     openai:
       chat:
